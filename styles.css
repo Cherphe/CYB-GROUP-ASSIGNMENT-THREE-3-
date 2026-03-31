@@ -1,0 +1,228 @@
+:root {
+    --bg-start: #0b0e1a;
+    --bg-end: #111827;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --accent: #a3ff00;
+    --accent-dark: #84cc16;
+    --border: #334155;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Page Wrapper for Sticky Footer */
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container */
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    padding: 24px 0 40px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.btn-get-template {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    padding: 60px 0 100px;
+    text-align: center;
+    flex: 1;
+}
+
+.clutch {
+    color: var(--accent);
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    letter-spacing: 0.5px;
+}
+
+.review {
+    color: var(--accent);
+    margin-top: 0.5px;
+}
+
+.headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 8vw, 5.8rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1.2px;
+    margin-bottom: 28px;
+    margin-top: 0;
+}
+
+.headline span {
+    color: var(--accent);
+}
+
+.sub-description {
+    font-size: clamp(1.15rem, 3.2vw, 1.45rem);
+    max-width: 720px;
+    margin: 0 auto 48px;
+    color: var(--muted);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 14px 32px;
+    border-radius: 9999px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #000;
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--border);
+    color: var(--text);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.availability {
+    color: var(--accent);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 16px 0 80px;
+}
+
+/* Trusted Logos */
+.trusted-section {
+    margin-top: 60px;
+}
+
+.trusted-title {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px 60px;
+    opacity: 0.75;
+}
+
+.logo-item {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    letter-spacing: 0.5px;
+}
+
+/* Footer */
+.footer {
+    color: #84cc16;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 40px 15px 50px;
+    margin-top: auto;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .nav-links { gap: 24px; }
+}
+
+@media (max-width: 768px) {
+    header { padding: 20px 0 32px; }
+    .hero { padding: 40px 0 80px; }
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 320px;
+        padding: 16px 40px;
+    }
+    .logo-grid { gap: 32px 48px; }
+}
